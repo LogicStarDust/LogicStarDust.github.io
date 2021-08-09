@@ -23,7 +23,14 @@
           {% endunless %}
 
         {% elsif forloop.last %}
-          <span>{{ page.title }}</span>
+          <span>
+            <!--  {{ item | capitalize }} 下面处理把单词汉化成中文-->
+            {% assign outTmp = page.title %}
+            {% if outTmp == 'Posts' %}
+                {{ '文章' }}
+            {% else %}
+                {{ outTmp }
+          </span>
 
         {% else %}
         <span>
