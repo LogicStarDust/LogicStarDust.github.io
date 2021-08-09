@@ -75,7 +75,7 @@ theme_mode:   # [light|dark]
 img_cdn: ''
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://raw.githubusercontent.com/LogicStarDust/LogicStarDust.github.io/main/%E8%8E%AB%E8%92%822.jpgg
+avatar: https://raw.githubusercontent.com/LogicStarDust/LogicStarDust.github.io/main/md.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
