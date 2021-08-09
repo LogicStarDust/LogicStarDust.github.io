@@ -3,17 +3,17 @@
 panel:
   lastmod: 最近更新
   trending_tags: 热门标签
-  toc: Contents
+  toc: 目录
 
 post:
-  relate_posts: Further Reading
-  share: Share
+  relate_posts: 查看详细
+  share: 分享
   button:
-    next: Newer
-    previous: Older
+    next: 下一个
+    previous: 上一个
 
 search_hint: 搜索   # text show on search bar
 
-pin_prompt: Pinned    # pinned prompt
+pin_prompt: 固定    # pinned prompt
 
 read_time_unit: min   # see posts' time to read
