@@ -23,16 +23,7 @@
           {% endunless %}
 
         {% elsif forloop.last %}
-          <span>
-            <!--  {{ item | capitalize }} 下面处理把单词汉化成中文-->
-            {% assign outTmp1 = page.title %}
-            {% if outTmp1 == 'Posts' %}
-                {{ '文章' }}
-            {% else %}
-                {{ outTmp1 }}
-            {% endif %}
-          </span>
-
+          <span>{{ page.title }}</span>
         {% else %}
         <span>
           {% assign url = item %}
@@ -46,6 +37,8 @@
                 {{ '标签' }}
             {% elsif outTmp == 'Categories' %}
                 {{ '分类' }}
+            {% elsif outTmp == 'Posts' %}
+                {{ '文章' }}
             {% else %}
                 {{ outTmp }}
             {% endif %}
