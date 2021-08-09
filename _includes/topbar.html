@@ -25,11 +25,11 @@
         {% elsif forloop.last %}
           <span>
             <!--  {{ item | capitalize }} 下面处理把单词汉化成中文-->
-            {% assign outTmp = page.title %}
-            {% if outTmp == 'Posts' %}
+            {% assign outTmp1 = page.title %}
+            {% if outTmp1 == 'Posts' %}
                 {{ '文章' }}
             {% else %}
-                {{ outTmp }
+                {{ outTmp1 }
             {% endif %}
           </span>
 
