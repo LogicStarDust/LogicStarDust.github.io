@@ -32,7 +32,15 @@
             {% assign url = '/' %}
           {% endif %}
           <a href="{{ url | relative_url }}">
-            {{ item | capitalize }}
+            <!--  {{ item | capitalize }} 下面处理把单词汉化成中文-->
+            {% assign outTmp = item | capitalize %}
+            {% if outTmp == 'Tags' %}
+                {{ '标签' }}
+            {% elsif outTmp == 'Categories' %}
+                {{ '分类' }}
+            {% else %}
+                {{ outTmp }}
+            {% endif %}
           </a>
         </span>
 
@@ -48,11 +56,11 @@
 
     <div id="topbar-title">
       {% if page.layout == 'home' %}
-        {{- site.title -}}
+      {{- site.title -}}
       {% elsif page.dynamic_title %}
-        {{- page.title -}}
+      {{- page.title -}}
       {% else %}
-        {{- page.layout | capitalize -}}
+      {{- page.layout | capitalize -}}
       {% endif %}
     </div>
 
@@ -60,10 +68,11 @@
     <span id="search-wrapper" class="align-items-center">
       <i class="fas fa-search fa-fw"></i>
       <input class="form-control" id="search-input" type="search"
-        aria-label="search" autocomplete="off" placeholder="{{ site.data.label.search_hint | default: 'Search' }}...">
+             aria-label="search" autocomplete="off"
+             placeholder="{{ site.data.label.search_hint | default: 'Search' }}...">
       <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i>
     </span>
-    <span id="search-cancel" >Cancel</span>
+    <span id="search-cancel">Cancel</span>
   </div>
 
 </div>
