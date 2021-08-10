@@ -16,6 +16,7 @@ tags: [基石]
 * Map/Reduce Task: 是Container运行的一种子进程，负责执行map或reduce具体的task
 
 ## 二、控制参数
+
 <table>
 <tr>
     <td>配置对象<br/>
@@ -86,6 +87,7 @@ tags: [基石]
     <td>0</td>
 </tr>
 </table>
+
 
 * mapreduce.map.java.opts 和 mapreduce.map.memory.mb
 
