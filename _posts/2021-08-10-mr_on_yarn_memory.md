@@ -87,7 +87,9 @@ tags: [基石]
     <td>0</td>
 </tr>
 </table>
+<br>
 
+## 三、参数原理
 
 * mapreduce.map.java.opts 和 mapreduce.map.memory.mb
 
@@ -130,4 +132,3 @@ tags: [基石]
 
   * ![container_monitor](../assets/img/posts_img/container_monitor.png)
 
-## 三、最佳实践
