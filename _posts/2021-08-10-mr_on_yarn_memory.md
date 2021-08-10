@@ -20,7 +20,7 @@ tags: [基石]
 
 <table>
 <tr>
-    <td>配置对象<br/>
+    <td>配置对象</td>
     <td>参数项</td>
     <td>旧版参数</td>
     <td>默认值</td>
