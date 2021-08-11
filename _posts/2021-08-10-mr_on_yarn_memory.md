@@ -36,7 +36,7 @@ tags: [基石]
     <td>1</td>
 </tr>
 <tr>
-    <td>mapreduce.map.memory-mb</td>
+    <td>mapreduce.map.memory.mb</td>
     <td>mapred.job.map.memory.mb</td>
     <td>1024</td>
     <td>mapred-site.xml</td>
@@ -51,7 +51,7 @@ tags: [基石]
     <td>1</td>
 </tr>
 <tr>
-    <td>mapreduce.reduce.memory-mb</td>
+    <td>mapreduce.reduce.memory.mb</td>
     <td>mapred.job.reduce.memory.mb</td>
     <td>1024</td>
     <td>mapred-site.xml</td>
