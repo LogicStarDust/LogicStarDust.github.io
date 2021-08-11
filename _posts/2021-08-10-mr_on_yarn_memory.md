@@ -124,7 +124,6 @@ tags: [基石]
 
   * ContainerMonitor 就是上述所说的 NodeManager 中监控每个 Container 内存使用情况的 monitor，它是一个独立线程。ContainerMonitor 获得单个 Container 内存（包括物理内存和虚拟内存）使用情况的逻辑如下：
 
-
     * Monitor 每隔 3 秒钟就更新一次每个 Container 的使用情况；更新的方式是：
 
       1. 查看 /proc/pid/stat 目录下的所有文件，从中获得每个进程的所有信息；
