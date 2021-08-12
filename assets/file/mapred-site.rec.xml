@@ -39,7 +39,7 @@
 
   <property>
       <name>mapreduce.jobhistory.done-dir</name>
-      <value>根据需要配置/value>
+      <value>根据需要配置</value>
   </property>
   <property>
     <name>mapreduce.map.memory.mb</name>
