@@ -22,7 +22,7 @@ tags: [基石,调优]
 * 参数官方解释以及默认值：https://hadoop.apache.org/docs/r2.7.3/hadoop-mapreduce-client/hadoop-mapreduce-client-core/mapred-default.xml
 * mapreduce的详解可以参考：https://blog.csdn.net/aijiudu/article/details/72353510
 
-下表是mapred-site.xml建议项目（http://logic.stardust.wang/asset/file/mapred-site.rec.xml）：
+下表是mapred-site.xml建议项目（ http://logic.stardust.wang/asset/file/mapred-site.rec.xml ）：
 
 参数项|默认|推荐配置|说明
 ----|----|----|----
