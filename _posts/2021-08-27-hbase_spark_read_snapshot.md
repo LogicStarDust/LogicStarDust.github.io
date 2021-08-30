@@ -45,7 +45,7 @@ import org.apache.hadoop.hbase.protobuf.ProtobufUtil
 import org.apache.hadoop.hbase.util.{Base64, Bytes}
 
 object getHBaseBySnapshot {
- 
+
     // 获取扫描器
   def getScanStr: String = {
     val scan = new Scan()
@@ -81,12 +81,12 @@ object getHBaseBySnapshot {
     println(rowkey + "---" + name)
     name
   }
-    
+
   def main(args: Array[String]): Unit = {
     val sparkSession = SparkSession.builder
       .getOrCreate()
     val sc = sparkSession.sparkContext
-      
+
     // 1.2. 初始化任务 注意如果使用spark-shell会报错，请用spark-submit测试
     //    val job = Job.getInstance(getHbaseConf)
     lazy val job = Job.getInstance(getHbaseConf)
@@ -103,7 +103,7 @@ object getHBaseBySnapshot {
     // action触发操作,把读取HBase RDD(格式为(ImmutableBytesWritable,Result),解析成可读的文本格式
     hbaseRDD.map(_._2).take(10).map(getRes)
   }
-    
+
 }
 ```
 
@@ -112,7 +112,7 @@ object getHBaseBySnapshot {
 1. 快照创建
 
    - 每隔固定时间使用命令创建：
-     ```shell 
+     ```shell
      #直接创建
      hbase> snapshot 'myTable', 'snapshot_test_20210821'
      #可以使用SKIP_FLUSH跳过flush,这样快照中不包含RS内存中的数据，这样快照速度会更快
@@ -120,7 +120,7 @@ object getHBaseBySnapshot {
      ```
    - 每次任务执行前创建
 
-2.  快照清理
+2. 快照清理  
 
    - 定时任务清理快照
 
@@ -134,5 +134,5 @@ object getHBaseBySnapshot {
      # 创建快照24小时后自动删除
      hbase> snapshot 'mytable', 'snapshot1234', {TTL => 86400}
      ```
-     
-     
+
+
