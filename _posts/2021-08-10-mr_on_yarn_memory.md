@@ -8,7 +8,7 @@ tags: [基石]
 
 ## 一、内存模型
 首先是yarn的简单架构：
-![yarn](http://logic.stardust.wang/assets/img/posts_img/yarn.png)
+![yarn](assets/img/posts_img/yarn.png)
 		在一个NodeManager中，可以启动多个Container,每个Container内部再去执行Map Task或Reduce Task，有一个Container作为本次任务的AM(Application Master)管理、协调和追踪整个任务的执行。
 
 * Container: 逻辑上看是一个“容器”，具有内存和cpu两种关键的资源，是一种资源单元。其实际是一个**进程**，由这个**进程启动各种子进程以完成交给自己的工作，比如作为AM或者child（执行MapReduce Task）。**
@@ -132,5 +132,5 @@ tags: [基石]
 
       3. 然后从 ProcfsBasedProcessTree 类对象中获得当前进程 (Container) 总虚拟内存量和物理内存量。
 
-  * ![container_monitor](http://logic.stardust.wang/assets/img/posts_img/container_monitor.png)
+  * ![container_monitor](assets/img/posts_img/container_monitor.png)
 
